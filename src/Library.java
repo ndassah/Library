@@ -18,6 +18,7 @@ public class Library {
             System.out.println("6. Afficher les livres disponibles");
             System.out.println("7. Modifier les informations d’un livre");
             System.out.println("8. Quitter");
+            System.out.print("Choix : ");
 
             choice = scanner.nextInt();
             scanner.nextLine(); // Consommer le saut de ligne

@@ -9,7 +9,7 @@ class Book {
     private boolean availability;
 
     public Book(String name, int pages, Gender gender, int years, Author author, String editor, boolean availability) {
-        this.code = generateRandomCode(10);
+        this.code = "#"+generateRandomCode(10);
         this.name = name;
         this.pages = pages;
         this.gender = gender;
@@ -20,7 +20,7 @@ class Book {
     }
 
     private String generateRandomCode(int length) {
-        String characters = "#"+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder result = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
             int index = (int) (characters.length() * Math.random());
@@ -35,6 +35,34 @@ class Book {
 
     public Author getAuthor() {
         return author;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = editor;
     }
 
     public Gender getGender() {
